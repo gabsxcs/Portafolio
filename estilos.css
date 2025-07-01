@@ -169,6 +169,7 @@
             font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 2rem;
+            text-align: justify;
         }
 
         .cta-button {
@@ -334,6 +335,10 @@
             border-radius: 15px;
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
             width: 45%;
+        }
+
+        .timeline-item p {
+            text-align: justify;
         }
 
         .timeline-item:nth-child(odd) {
