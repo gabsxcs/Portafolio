@@ -1,10 +1,12 @@
+/*Aqui 1*/
+
 * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
+}
 
-        :root {
+            :root {
             --primary-purple: #6366f1;
             --secondary-purple: #8b5cf6;
             --light-purple: #f3f4f6;
@@ -14,7 +16,7 @@
             --text-light: #6b7280;
             --white: #ffffff;
             --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-        }
+            }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
