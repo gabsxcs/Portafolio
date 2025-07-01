@@ -169,7 +169,6 @@
             font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 2rem;
-            text-align: justify;
         }
 
         .cta-button {
@@ -335,10 +334,6 @@
             border-radius: 15px;
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
             width: 45%;
-        }
-
-        .timeline-item p {
-            text-align: justify;
         }
 
         .timeline-item:nth-child(odd) {
@@ -588,3 +583,199 @@
                 font-size: 2rem;
             }
         }
+
+@media (max-width: 768px) {
+    .about-section div[style*="display: grid"] {
+        display: block !important;
+        gap: 0 !important;
+    }
+    
+    .about-section div[style*="display: grid"] > div:first-child {
+        margin-bottom: 2rem;
+    }
+    
+    .about-section div[style*="display: grid"] > div:last-child {
+        text-align: center !important;
+        margin-top: 1rem;
+    }
+    
+    .about-section .profile-photo {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    
+    .timeline {
+        position: relative;
+        margin: 2rem 0;
+        padding-left: 2rem;
+    }
+    
+    .timeline::before {
+        left: 1rem;
+        transform: none;
+    }
+    
+    .timeline-item {
+        width: calc(100% - 2rem);
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        margin-left: 2rem;
+    }
+    
+    .timeline-item::before {
+        left: -1.5rem;
+        top: 1.5rem;
+    }
+    
+    .timeline-item:nth-child(odd)::before,
+    .timeline-item:nth-child(even)::before {
+        left: -1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section div[style*="display: grid"] p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .about-section .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .timeline {
+        padding-left: 1.5rem;
+    }
+    
+    .timeline::before {
+        left: 0.75rem;
+    }
+    
+    .timeline-item {
+        width: calc(100% - 1.5rem);
+        margin-left: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        margin-left: 1.5rem;
+    }
+    
+    .timeline-item::before {
+        left: -1.25rem;
+        width: 12px;
+        height: 12px;
+    }
+    
+    .timeline-item:nth-child(odd)::before,
+    .timeline-item:nth-child(even)::before {
+        left: -1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section h3 {
+        font-size: 1.5rem !important;
+        text-align: center;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .about-section p {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+    
+    .about-section p strong {
+        color: var(--primary-purple);
+    }
+    
+    .contact-info {
+        padding: 2rem 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.5rem !important;
+        text-align: center;
+        margin-bottom: 2rem !important;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: 15px;
+    }
+    
+    .contact-item i {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .contact-item div {
+        width: 100%;
+    }
+    
+    .contact-item strong {
+        display: block;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color: var(--primary-purple);
+    }
+    
+    .contact-item p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.4;
+        word-break: break-word;
+    }
+    
+    .contact-item a {
+        font-size: 0.9rem;
+        word-break: break-all;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info {
+        padding: 1.5rem 1rem;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.3rem !important;
+    }
+    
+    .contact-item {
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-item i {
+        font-size: 1.8rem;
+    }
+    
+    .contact-item strong {
+        font-size: 1rem;
+    }
+    
+    .contact-item p {
+        font-size: 0.9rem;
+    }
+    
+    .contact-item a {
+        font-size: 0.85rem;
+    }
+    
+    .contact-item:nth-child(4) p {
+        line-height: 1.3;
+    }
+}
