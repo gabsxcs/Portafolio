@@ -339,8 +339,20 @@
             width: 45%;
         }
 
+
+        .timeline-item h3{
+            color: var(--primary-purple); 
+            margin-bottom: 0.5rem;
+        }
+
+
         .timeline-item p {
             text-align: justify;
+        }
+
+        .timeline-insti{
+            color: var(--text-light);
+            margin-bottom: 1rem;
         }
 
         .timeline-item:nth-child(odd) {
@@ -399,6 +411,7 @@
 
         .project-body {
             padding: 1.5rem;
+            text-align: justify;
         }
 
         .project-links {
