@@ -553,11 +553,9 @@
   }
 
 
-
-  /* ---------- Hero secundario (más corto) ---------- */
 .hero-sub{ min-height: 65svh; }
 
-/* ---------- Timeline (Educación) ---------- */
+/* ---------- (Educación) ---------- */
 .timeline{ position: relative; }
 
 .timeline-item{

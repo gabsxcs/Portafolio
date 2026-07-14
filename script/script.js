@@ -120,7 +120,6 @@
     step();
   }
 
-  // --- Animación al hacer Scroll ---
   const revealElements = document.querySelectorAll('.reveal');
   
   const revealOptions = {
