@@ -1,379 +1,188 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Gabriela Sandoval - Portafolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <script src="./main.js"></script>
-    <link rel="stylesheet" href="./estilos.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabriela Sandoval — Desarrolladora Web</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css">
+<script src="./script/script.js" defer></script>
+<link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Mi Portafolio</div>
-            
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#" onclick="showPage('home'); closeMenu();" class="active">Inicio</a></li>
-                <li><a href="#" onclick="showPage('about'); closeMenu();">Sobre Mí</a></li>
-                <li><a href="#" onclick="showPage('experience'); closeMenu();">Experiencia</a></li>
-                <li><a href="#" onclick="showPage('projects'); closeMenu();">Proyectos</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <!-- Home Page -->
-        <div id="home" class="page active">
-            <section class="hero">
-                <div class="hero-content">
-                    <h1>Gabriela Sandoval</h1>
-                    <p class="subtitle">Desarrolladora Web Junior</p>
-                    <p class="description">
-                        Soy programadora junior especializada en desarrollo de aplicaciones web, titulada en un ciclo formativo en Desarrollo de Aplicaciones Web y con una sólida base tecnológica adquirida durante mi formación en un Bachillerato Tecnológico.
-                        <br><br>Trabajo con tecnologías actuales como HTML, CSS, JavaScript y PHP, y tengo experiencia con frameworks modernos como React y Vue.js. Además, manejo bases de datos como MySQL y PostgreSQL, y utilizo Git y GitHub para el control de versiones.
-                        <br><br>Me apasiona el desarrollo web y estoy en constante búsqueda de nuevos conocimientos para seguir creciendo profesionalmente y mejorar mis habilidades cada día.
-                    </p>
-                    <a href="#" onclick="showPage('projects')" class="cta-button">
-                        Ver Mis Proyectos
-                    </a>
-                </div>
-                <div class="hero-image">
-                    <img src="https://res.cloudinary.com/dhw8hy9el/image/upload/v1749577995/1733227159108_lafixz.jpg" alt="Gabriela Sandoval" class="profile-photo">
-                </div>
-            </section>
+<header>
+  <div class="logo">gabriela<span>.</span>sandoval</div>
+  <nav>
+    <ul>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="./experience.html" class="nav-cta">Educación &amp; Proyectos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <canvas id="network-canvas" aria-hidden="true"></canvas>
+  <div class="hero-content">
+    <div class="prompt-line mono">gabriela@sandoval:~$ whoami<span class="cursor"></span></div>
+    <h1 class="name">Gabriela<br><em>Sandoval Castillo </em></h1>
+    <p class="role-tag">Desarrolladora <strong>Full Stack</strong> en formación — construyendo mi camino en la ingeniería informática.</p>
+    <p class="hero-desc">Técnico Superior en Desarrollo de Aplicaciones Web, actualmente cursando el grado en Ingeniería Informática. Aprendiendo, programando y creando algo nuevo cada semana.</p>
+  </div>
+</section>
+
+<section class="page-section reveal" id="sobre-mi">
+  <div class="eyebrow mono">Sobre mí</div>
+  
+  <div class="about-grid">
+    <div class="about-visual">
+      <div class="frame photo-frame">
+        <div class="frame-bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="frame-name mono">perfil.jpg</span>
         </div>
+        <img src="https://res.cloudinary.com/dhw8hy9el/image/upload/v1784053404/copy_of_a77ff2ea-f01c-4228-88a5-caf996337a2b_fik5fg.jpg" alt="Foto de Gabriela Sandoval">
+      </div>
 
-        <!-- About Page -->
-        <div id="about" class="page">
-            <section class="about-section">
-                <h2 class="section-title">Sobre Mí</h2>
-                <p style="font-size: 1.1rem; line-height: 1.8; text-align: center; margin-bottom: 3rem;">
-                    Soy una desarrolladora web de 19 años, recién graduada del Ciclo Superior en Desarrollo de Aplicaciones Web. A lo largo de mi formación, he trabajado con tecnologías actuales y he tenido la oportunidad de aplicar mis conocimientos en entornos profesionales reales, lo que me ha permitido adquirir experiencia práctica y consolidar mis habilidades. Me apasiona crear soluciones web innovadoras y estoy siempre dispuesta a aprender nuevas tecnologías.
-                </p>
+      <div class="status-chip">
+        <span class="label mono">formación</span>
+        <span class="value">Ingeniería Informática</span>
+      </div>
+      <div class="status-chip">
+        <span class="label mono">universidad</span>
+        <span class="value">UOC</span>
+      </div>
+    </div>
 
-                <div class="tech-section">
-                    <h3 class="tech-title">Frontend</h3>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <i class="fab fa-html5 tech-icon html-icon"></i>
-                            <span class="tech-name">HTML5</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-css3-alt tech-icon css-icon"></i>
-                            <span class="tech-name">CSS3</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-js-square tech-icon js-icon"></i>
-                            <span class="tech-name">JavaScript</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-react tech-icon react-icon"></i>
-                            <span class="tech-name">React</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-vuejs tech-icon vue-icon"></i>
-                            <span class="tech-name">Vue.js</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-bootstrap tech-icon bootstrap-icon"></i>
-                            <span class="tech-name">Bootstrap</span>
-                        </div>
-                    </div>
-                </div>
+    <div class="about-text">
+        <p>Soy programadora junior graduada del ciclo formativo de <strong>Desarrollo de Aplicaciones Web</strong> y actualmente me encuentro cursando el Grado en <strong>Ingeniería Informática</strong> en la Universitat Oberta de Catalunya (UOC).</p>
+        
+        <p>Manejo herramientas y lenguajes actuales como HTML, CSS, JavaScript, PHP y frameworks como React y Vue.js. Tengo conocimientos en bases de datos como MySQL y PostgreSQL, y también manejo el control de versiones con GitHub.</p>
 
-                <div class="tech-section">
-                    <h3 class="tech-title">Backend</h3>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <i class="fab fa-java tech-icon java-icon"></i>
-                            <span class="tech-name">Java</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-database tech-icon mysql-icon"></i>
-                            <span class="tech-name">MySQL</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-php tech-icon php-icon"></i>
-                            <span class="tech-name">PHP</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-database tech-icon postgresql-icon"></i>
-                            <span class="tech-name">PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
+        <p>Me apasiona el desarrollo web y siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades. Además, tengo un gran interés por ampliar mis conocimientos, por lo que actualmente estoy aprendiendo programación básica en <strong>ABAP</strong>.</p>
 
-                <div class="tech-section">
-                    <h3 class="tech-title">Control de Versiones</h3>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <i class="fab fa-git-alt tech-icon git-icon"></i>
-                            <span class="tech-name">Git</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-github tech-icon github-icon"></i>
-                            <span class="tech-name">GitHub</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="about-section">
-                <h3 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--primary-purple);">Más Información Personal</h3>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
-                    <div>
-                        <p style="margin-bottom: 1rem;"><strong>Ubicación:</strong> Mataró, Barcelona. España</p>
-                        <p style="margin-bottom: 1rem;"><strong>Edad:</strong> 19 años</p>
-                        <p style="margin-bottom: 1rem;"><strong>Idiomas:</strong> Español (Nativo), Inglés (Intermedio), Catalán(Alto)</p>
-                        <p style="margin-bottom: 1rem;"><strong>Intereses Personales:</strong> Lectura, Música, Edición de Videos.</p> 
-                    </div>
-                    <div style="text-align: center;">
-                        <img src="https://res.cloudinary.com/dhw8hy9el/image/upload/v1749577995/1733227159108_lafixz.jpg" alt="Gabriela Sandoval" class="profile-photo">
-                    </div>
-                </div>
-            </section>
-
-            <div class="contact-info">
-                <h3 style="margin-bottom: 2rem; color: var(--primary-purple);">Información de Contacto</h3>
-                
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <strong>Email</strong>
-                        <p>gabsxc.ss@gmail.com</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <strong>Teléfono</strong>
-                        <p>+34 666 90 12 03</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <div>
-                        <strong>LinkedIn</strong>
-                        <p><a href="https://www.linkedin.com/in/gabriela-sandoval-castillo/">linkedin.com/in/gabriela-sandoval-castillo</a></p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <div>
-                        <strong>GitHub</strong>
-                        <p><a href="https://github.com/gabsxcs/"> github.com/gabsxcs </a></p>
-                    </div>
-                </div>
-            </div>
+        <!-- Bloque de idiomas, estilo terminal -->
+        <div class="frame terminal-block">
+          <div class="frame-bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="frame-name mono">idiomas.yml</span>
+          </div>
+          <div class="terminal-body mono">
+            <div class="yml-row"><span class="yml-key">español:</span><span class="yml-val">nativo</span></div>
+            <div class="yml-row"><span class="yml-key">catalán:</span><span class="yml-val">alto</span></div>
+            <div class="yml-row"><span class="yml-key">inglés:</span><span class="yml-val">intermedio</span></div>
+            <div class="yml-row"><span class="yml-key">tailandés:</span><span class="yml-val">básico</span></div>
+          </div>
         </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Experience Page -->
-        <div id="experience" class="page">
-            <h2 class="section-title">Experiencia y Formación</h2>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Desarrolladora Web Junior</h3>
-                    <p class="timeline-insti">Tellmebye • Enero 2025 - Junio 2025</p>
-                    <p>Prácticas laborales en desarrollo web utilizando PHP, JavaScript, HTML y CSS. Trabajo con bases de datos MySQL. Desarrollo de funcionalidades frontend y backend en proyectos reales.</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Ciclo Superior en Desarrollo de Aplicaciones Web</h3>
-                    <p class="timeline-insti">Institut Thos I Codina • 2023 - 2025</p>
-                    <p>Formación superior completa en desarrollo de aplicaciones web. Aprendizaje de lenguajes como PHP, Java, JavaScript, frameworks como React, y gestión de bases de datos con MySQL y PostgreSQL.</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Bachillerato Científico/Tecnológico</h3>
-                    <p class="timeline-insti">Instituto Laia L'Arquera • 2021 - 2023</p>
-                    <p>Formación académica en ciencias y tecnología.</p>
-                </div>
-            </div>
-        </div>
+<section class="page-section reveal" id="habilidades">
+  <div class="eyebrow mono">Habilidades</div>
 
-        <!-- Projects Page -->
-        <div id="projects" class="page">
-            <h2 class="section-title">Mis Proyectos</h2>
-            
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>API de Microservicios</h3>
-                        <p>Gestión de eventos, tickets y usuarios</p>
-                    </div>
-                    <div class="project-body">
-                        <p>API RESTful construida con arquitectura de microservicios. Soporta autenticación JWT, gestión completa de eventos, tickets en PDF, exportación XML y administración de usuarios, asientos y compras.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/PHP/API_REST" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                            <a href="https://gold-firefly-407045.postman.co/workspace/My-Workspace~3f5e3eb7-c4a8-4904-8ec4-5f84d96fe2bd/collection/42588618-d0887037-cf88-4fce-acd1-9564e417508e" class="project-link" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>
-                                Postman
-                            </a>
-                        </div>
-                    </div>
-                </div>
+  <div class="skill-category">
+    <h3 class="skill-cat-title mono"><span class="cat-index">01</span> Frontend</h3>
+    <div class="skill-cards">
+      <div class="skill-card"><i class="devicon-html5-plain"></i><span>HTML</span></div>
+      <div class="skill-card"><i class="devicon-css3-plain"></i><span>CSS</span></div>
+      <div class="skill-card"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+      <div class="skill-card"><i class="devicon-react-original"></i><span>React</span></div>
+      <div class="skill-card"><i class="devicon-vuejs-plain"></i><span>Vue.js</span></div>
+    </div>
+  </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Generador de Entradas PDF</h3>
-                        <p>Entradas de conciertos con QR y código de barras</p>
-                    </div>
-                    <div class="project-body">
-                        <p>Aplicación en PHP para generar entradas en formato PDF con diseño visual, código QR y código de barras. Utiliza mPDF, QR Code Generator y Barcode Generator para crear documentos personalizados desde el navegador.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/PHP/Entrada_Concierto" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                            <a href="./files/entrada_Demo.pdf" class="project-link" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>
-                                Demo PDF
-                            </a>
-                        </div>
-                    </div>
-                </div>
+  <div class="skill-category">
+    <h3 class="skill-cat-title mono"><span class="cat-index">02</span> Backend</h3>
+    <div class="skill-cards">
+      <div class="skill-card"><i class="devicon-php-plain"></i><span>PHP</span></div>
+      <div class="skill-card"><i class="devicon-mysql-plain"></i><span>MySQL</span></div>
+      <div class="skill-card"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span></div>
+    </div>
+  </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Gestión de Frases Célebres</h3>
-                        <p>Aplicación MVC con PHP y Doctrine</p>
-                    </div>
-                    <div class="project-body">
-                        <p>Aplicación web MVC desarrollada en PHP con Doctrine ORM. <br> Permite gestionar frases célebres, autores y temas con CRUD, buscador, paginación, y enrutamiento dinámico mediante FrontController. Incluye asociaciones y eliminación en cascada.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/PHP/Frases_Doctrine" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
+  <div class="skill-category">
+    <h3 class="skill-cat-title mono"><span class="cat-index">03</span> Control de versiones</h3>
+    <div class="skill-cards">
+      <div class="skill-card"><i class="devicon-git-plain"></i><span>Git</span></div>
+      <div class="skill-card"><i class="devicon-github-original"></i><span>GitHub</span></div>
+    </div>
+  </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Gestión de Frases + Landing Page</h3>
-                        <p>App MVC con XML, eventos y análisis de inversiones</p>
-                    </div>
-                    <div class="project-body">
-                        <p>Aplicación web con arquitectura MVC que gestiona frases célebres, autores y temas. Incluye una landing page con calendario de eventos, formulario de contacto, carga de datos desde XML y análisis de inversiones conectando con Inversis. <br>Base de datos gestionada mediante clases PDO/MySQLi.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/PHP/LandingPage_%26_Frases" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
+  <div class="skill-category">
+    <h3 class="skill-cat-title mono"><span class="cat-index">04</span> En aprendizaje</h3>
+    <div class="skill-cards">
+      <div class="skill-card skill-card--badge">
+        <span class="badge-glyph">AB</span>
+        <span>ABAP</span>
+      </div>
+    </div>
+  </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Chat en Red Local</h3>
-                        <p>Chat en tiempo real con MySQL y arquitectura MVC en Java</p>
-                    </div>
-                    <div class="project-body">
-                        <p>Aplicación de chat para aula con interfaz gráfica en Java (`JFrame`) y base de datos MySQL. Utiliza procedimientos almacenados para gestionar usuarios, sesiones y mensajes. Arquitectura MVC con control de acceso, una sesión por máquina y mensajes en tiempo real.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/Java/Chat" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
+</section>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Votaciones Municipales DB4O</h3>
-                        <p>Gestión de elecciones con base de datos orientada a objetos</p>
-                    </div>
-                    <div class="project-body">
-                        <p>Aplicación Java con interfaz Swing que importa datos electorales desde CSV y los almacena en una base de datos DB4O. Permite consultar resultados por municipio, comarca o provincia, listar partidos y corregir datos mediante actualizaciones inteligentes. Arquitectura MVC con uso de colecciones y persistencia orientada a objetos.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/Java/BD4OVotaciones" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
+<section class="page-section reveal" id="contacto">
+  <div class="eyebrow mono">Contacto</div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Animaciones CSS Creativas</h3>
-                        <p>Escenarios animados solo con CSS puro</p>
-                    </div>
-                    <div class="project-body">
-                        <p>Proyecto visual con ejercicios de animación hechos exclusivamente en CSS. Incluye una escena marina interactiva, carruseles animados 2D y 3D, zoom con texto emergente y efectos musicales con vinilos flotantes. Todo realizado sin JavaScript, aprovechando `@keyframes`, `transforms` y `:has()`.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/CSS_SCSS/AnimacionesCss" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
+  <div class="contact-terminal">
+    <div class="frame-bar">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      <span class="frame-name mono">contacto.env</span>
+    </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Interfaces con Bootstrap 5</h3>
-                        <p>Diseño responsivo con componentes y SCSS</p>
-                    </div>
-                    <div class="project-body">
-                        <p>Página web moderna creada con Bootstrap 5, que incluye navbar con modales, carrusel, cards personalizadas, offcanvas, tablas y formularios con validación. Estilizada con SCSS y Utility API para un diseño personalizado y responsive.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/CSS_SCSS/InterfazBootstrap" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <div class="contact-body">
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Mitología Griega Accesible</h3>
-                        <p>Web inclusiva conforme a estándares WCAG</p>
-                    </div>
-                    <div class="project-body">
-                        <p>Página informativa sobre mitología griega diseñada con accesibilidad como eje principal. Implementa roles ARIA, navegación por teclado, formularios accesibles, contraste AAA, multimedia con subtítulos y estructuras semánticas para lectores de pantalla.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/CSS_SCSS/PaginaAccesible" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gabsxc.ss@gmail.com" target="_blank" rel="noopener" class="contact-row">
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>
+        </span>
+        <span class="contact-text">
+          <span class="contact-label mono">EMAIL</span>
+          <span class="contact-value">gabsxc.ss@gmail.com</span>
+        </span>
+        <span class="contact-arrow">↗</span>
+      </a>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Web con SASS + Modo Oscuro</h3>
-                        <p>Responsive, accesible y con estilos SCSS</p>
-                    </div>
-                    <div class="project-body">
-                        <p>Página moderna con secciones de inicio, clientes y contacto. Estilizada con SASS (SCSS), incluye modo claro/oscuro con transición suave y diseño responsive que se adapta a móviles, tablets y escritorio. Código organizado y mantenible con mixins, variables y nesting.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/CSS_SCSS/SassResponsive" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
+      <a href="tel:+34666901203" class="contact-row">
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg>
+        </span>
+        <span class="contact-text">
+          <span class="contact-label mono">TELÉFONO</span>
+          <span class="contact-value">+34 666 90 12 03</span>
+        </span>
+        <span class="contact-arrow">↗</span>
+      </a>
 
+      <a href="https://www.linkedin.com/in/gabriela-sandoval-castillo/" target="_blank" rel="noopener" class="contact-row">
+        <span class="contact-icon"><i class="devicon-linkedin-plain"></i></span>
+        <span class="contact-text">
+          <span class="contact-label mono">LINKEDIN</span>
+          <span class="contact-value">linkedin.com/in/gabriela-sandoval-castillo</span>
+        </span>
+        <span class="contact-arrow">↗</span>
+      </a>
 
+      <a href="https://github.com/gabsxcs/" target="_blank" rel="noopener" class="contact-row">
+        <span class="contact-icon"><i class="devicon-github-original"></i></span>
+        <span class="contact-text">
+          <span class="contact-label mono">GITHUB</span>
+          <span class="contact-value">github.com/gabsxcs</span>
+        </span>
+        <span class="contact-arrow">↗</span>
+      </a>
 
-            </div>
-        </div>
-    </main>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="mono">© 2026 Gabriela Sandoval</p>
+  <a href="./experience.html" class="next-link">Educación, experiencia y proyectos →</a>
+</footer>
+
 </body>
 </html>
