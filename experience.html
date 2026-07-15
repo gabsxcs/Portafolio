@@ -10,16 +10,22 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css">
 <link rel="stylesheet" href="./styles/styles.css">
 <script src="./script/script.js" defer></script>
+<script src="./script/idiomas.js" defer></script>
 </head>
 <body>
     <header>
   <div class="logo">gabriela<span>.</span>sandoval</div>
   <nav>
     <ul>
-      <li><a href="#educacion">Educación</a></li>
-      <li><a href="#experiencia">Experiencia</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="./index.html" class="nav-cta">← Inicio </a></li>
+      <li><a href="#educacion" data-lang="nav_edu">Educación</a></li>
+      <li><a href="#experiencia" data-lang="nav_exp">Experiencia</a></li>
+      <li><a href="#proyectos" data-lang="nav_proj">Proyectos</a></li>
+      <li><a href="./index.html" class="nav-cta" data-lang="nav_back">← Inicio </a></li>
+      <li style="margin-left: 1rem;">
+        <button class="lang-btn" onclick="cambiarIdioma('es')">ES</button>
+        <span style="opacity:0.3">|</span>
+        <button class="lang-btn" onclick="cambiarIdioma('en')">EN</button>
+      </li>
     </ul>
   </nav>
 </header>
@@ -27,14 +33,14 @@
 <section class="hero hero-sub">
   <canvas id="network-canvas" aria-hidden="true"></canvas>
   <div class="hero-content">
-    <div class="prompt-line mono">gabriela@sandoval:~$ cat trayectoria.log<span class="cursor"></span></div>
-    <h1 class="name">Mi <em>camino</em> profesional</h1>
-    <p class="hero-desc">Formación, experiencia y proyectos.</p>
+    <div class="prompt-line mono" data-lang="hero_prompt">gabriela@sandoval:~$ cat trayectoria.log<span class="cursor"></span></div>
+    <h1 class="name" data-lang="hero_title_exp">Mi <em>camino</em> profesional</h1>
+    <p class="hero-desc" data-lang="hero_desc_exp">Formación, experiencia y proyectos.</p>
   </div>
 </section>
 
 <section class="page-section reveal" id="educacion">
-  <div class="eyebrow mono">Educación</div>
+  <div class="eyebrow mono" data-lang="eyebrow_edu">Educación</div>
 
   <div class="timeline">
 
@@ -44,10 +50,10 @@
         <span class="timeline-line"></span>
       </div>
       <div class="timeline-content">
-        <span class="timeline-date mono">Septiembre 2025 — Actualidad</span>
-        <h3>Ingeniería Informática</h3>
-        <p class="timeline-place">Universitat Oberta de Catalunya, Barcelona, España</p>
-        <p class="timeline-desc">Estudios universitarios de grado en curso.</p>
+        <span class="timeline-date mono" data-lang="edu_1_date">Septiembre 2025 — Actualidad</span>
+        <h3 data-lang="edu_1_title">Ingeniería Informática</h3>
+        <p class="timeline-place" data-lang="edu_1_place">Universitat Oberta de Catalunya, Barcelona, España</p>
+        <p class="timeline-desc" data-lang="edu_1_desc">Estudios universitarios de grado en curso.</p>
       </div>
     </div>
 
@@ -57,10 +63,10 @@
         <span class="timeline-line"></span>
       </div>
       <div class="timeline-content">
-        <span class="timeline-date mono">Septiembre 2023 — Mayo 2025</span>
-        <h3>Ciclo Superior de Desarrollo de Aplicaciones Web</h3>
-        <p class="timeline-place">Instituto Thos i Codina, Mataró, España</p>
-        <p class="timeline-desc">Formación técnica especializada en programación y desarrollo web.</p>
+        <span class="timeline-date mono" data-lang="edu_2_date">Septiembre 2023 — Mayo 2025</span>
+        <h3 data-lang="edu_2_title">Ciclo Superior de Desarrollo de Aplicaciones Web</h3>
+        <p class="timeline-place" data-lang="edu_2_place">Instituto Thos i Codina, Mataró, España</p>
+        <p class="timeline-desc" data-lang="edu_2_desc">Formación técnica especializada en programación y desarrollo web.</p>
       </div>
     </div>
 
@@ -70,10 +76,10 @@
         <span class="timeline-line"></span>
       </div>
       <div class="timeline-content">
-        <span class="timeline-date mono">Septiembre 2021 — Mayo 2023</span>
-        <h3>Bachillerato Tecnológico</h3>
-        <p class="timeline-place">Instituto Laia L'Arquera, Mataró, España</p>
-        <p class="timeline-desc">Especialización en la rama de ciencias y tecnología.</p>
+        <span class="timeline-date mono" data-lang="edu_3_date">Septiembre 2021 — Mayo 2023</span>
+        <h3 data-lang="edu_3_title">Bachillerato Tecnológico</h3>
+        <p class="timeline-place" data-lang="edu_3_place">Instituto Laia L'Arquera, Mataró, España</p>
+        <p class="timeline-desc" data-lang="edu_3_desc">Especialización en la rama de ciencias y tecnología.</p>
       </div>
     </div>
 
@@ -81,7 +87,7 @@
 </section>
 <!-- ===================== EXPERIENCIA ===================== -->
 <section class="page-section reveal" id="experiencia">
-  <div class="eyebrow mono">Experiencia</div>
+  <div class="eyebrow mono" data-lang="eyebrow_exp">Experiencia</div>
 
   <div class="job-card">
     <div class="frame-bar">
@@ -90,15 +96,15 @@
     </div>
     <div class="job-body">
       <div class="job-head">
-        <h3>Desarrolladora de Integración (SAP WM & Autostore)</h3>
+        <h3 data-lang="exp_1_title">Desarrolladora de Integración (SAP WM & Autostore)</h3>
         <span class="mono job-date">2026</span>
       </div>
-      <p class="job-company">Empresa Panameña de Alimentos</p>
+      <p class="job-company" data-lang="exp_1_company">Empresa Panameña de Alimentos</p>
       <ul class="job-list">
-        <li>Desarrollo en <strong>ABAP</strong> para la integración bidireccional entre <strong>SAP WM</strong> y el sistema automatizado <strong>Autostore</strong> mediante la creación y consumo de Web Services.</li>
-        <li>Automatización de tareas logísticas: creación, procesamiento y confirmación de órdenes de transporte y orquestación de salidas.</li>
-        <li>Implementación de programas y transacciones SAP para ajustes de stock y consulta de inventario en tiempo real.</li>
-        <li>Soporte técnico continuo, mantenimiento de canales de comunicación y procesamiento de mensajería para asegurar la integridad de los datos transaccionales.</li>
+        <li data-lang="exp_1_li1">Desarrollo en <strong>ABAP</strong> para la integración bidireccional entre <strong>SAP WM</strong> y el sistema automatizado <strong>Autostore</strong> mediante la creación y consumo de Web Services.</li>
+        <li data-lang="exp_1_li2">Automatización de tareas logísticas: creación, procesamiento y confirmación de órdenes de transporte y orquestación de salidas.</li>
+        <li data-lang="exp_1_li3">Implementación de programas y transacciones SAP para ajustes de stock y consulta de inventario en tiempo real.</li>
+        <li data-lang="exp_1_li4">Soporte técnico continuo, mantenimiento de canales de comunicación y procesamiento de mensajería para asegurar la integridad de los datos transaccionales.</li>
       </ul>
     </div>
   </div>
@@ -110,22 +116,21 @@
     </div>
     <div class="job-body">
       <div class="job-head">
-        <h3>Prácticas laborales en una empresa de software</h3>
-        <span class="mono job-date">Ene 2025 — Jun 2025</span>
+        <h3 data-lang="exp_2_title">Prácticas laborales en una empresa de software</h3>
+        <span class="mono job-date" data-lang="exp_2_date">Ene 2025 — Jun 2025</span>
       </div>
-      <p class="job-company">TellMeBye, Mataró, España</p>
+      <p class="job-company" data-lang="exp_2_company">TellMeBye, Mataró, España</p>
       <ul class="job-list">
-        <li>Colaboración y soporte en el desarrollo y mantenimiento de aplicaciones.</li>
-        <li>Adquisición de experiencia práctica en un entorno de trabajo real y uso de tecnologías del sector.</li>
+        <li data-lang="exp_2_li1">Colaboración y soporte en el desarrollo y mantenimiento de aplicaciones.</li>
+        <li data-lang="exp_2_li2">Adquisición de experiencia práctica en un entorno de trabajo real y uso de tecnologías del sector.</li>
       </ul>
     </div>
   </div>
 
 </section>
 
-
 <section class="page-section reveal" id="proyectos">
-  <div class="eyebrow mono">Proyectos</div>
+  <div class="eyebrow mono" data-lang="eyebrow_proj">Proyectos</div>
 
   <div class="project-grid">
 
@@ -133,19 +138,19 @@
     <div class="project-card">
       <div class="frame-bar">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        <span class="frame-name mono">api-microservicios.php</span>
+        <span class="frame-name mono" data-lang="frame_proj_1">api-microservicios.php</span>
       </div>
       <div class="project-body">
-        <h3>API de Microservicios</h3>
-        <p>API RESTful con arquitectura de microservicios. Soporta autenticación JWT, gestión de eventos, tickets en PDF, exportación XML y administración de usuarios, asientos y compras.</p>
+        <h3 data-lang="proj_1_title">API de Microservicios</h3>
+        <p data-lang="proj_1_desc">API RESTful con arquitectura de microservicios. Soporta autenticación JWT, gestión de eventos, tickets en PDF, exportación XML y administración de usuarios, asientos y compras.</p>
         <div class="chip-row">
           <span class="chip">PHP</span>
           <span class="chip">JWT</span>
           <span class="chip">REST</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/PHP/API_REST" target="_blank" class="mono">github →</a>
-          <a href="https://gold-firefly-407045.postman.co/workspace/My-Workspace~3f5e3eb7-c4a8-4904-8ec4-5f84d96fe2bd/collection/42588618-d0887037-cf88-4fce-acd1-9564e417508e" target="_blank" class="mono">postman →</a>
+          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/PHP/API_REST" target="_blank" class="mono" data-lang="link_github">github →</a>
+          <a href="https://gold-firefly-407045.postman.co/workspace/My-Workspace~3f5e3eb7-c4a8-4904-8ec4-5f84d96fe2bd/collection/42588618-d0887037-cf88-4fce-acd1-9564e417508e" target="_blank" class="mono" data-lang="link_postman">postman →</a>
         </div>
       </div>
     </div>
@@ -154,19 +159,19 @@
     <div class="project-card">
       <div class="frame-bar">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        <span class="frame-name mono">generador-entradas.php</span>
+        <span class="frame-name mono" data-lang="frame_proj_2">generador-entradas.php</span>
       </div>
       <div class="project-body">
-        <h3>Generador de Entradas PDF</h3>
-        <p>Aplicación para generar entradas en formato PDF con diseño visual, código QR y código de barras utilizando mPDF, QR Code Generator y Barcode Generator.</p>
+        <h3 data-lang="proj_2_title">Generador de Entradas PDF</h3>
+        <p data-lang="proj_2_desc">Aplicación para generar entradas en formato PDF con diseño visual, código QR y código de barras utilizando mPDF, QR Code Generator y Barcode Generator.</p>
         <div class="chip-row">
           <span class="chip">PHP</span>
           <span class="chip">mPDF</span>
           <span class="chip">QR/Barcode</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/PHP/Entrada_Concierto" target="_blank" class="mono">github →</a>
-          <a href="./files/entrada_Demo.pdf" target="_blank" class="mono">demo pdf →</a>
+          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/PHP/Entrada_Concierto" target="_blank" class="mono" data-lang="link_github">github →</a>
+          <a href="./files/entrada_Demo.pdf" target="_blank" class="mono" data-lang="link_demo">demo pdf →</a>
         </div>
       </div>
     </div>
@@ -175,18 +180,18 @@
     <div class="project-card">
       <div class="frame-bar">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        <span class="frame-name mono">frases-doctrine.php</span>
+        <span class="frame-name mono" data-lang="frame_proj_3">frases-doctrine.php</span>
       </div>
       <div class="project-body">
-        <h3>Gestión de Frases Célebres</h3>
-        <p>Aplicación web MVC con Doctrine ORM. Permite gestionar frases célebres, autores y temas con CRUD, buscador, paginación, y enrutamiento dinámico mediante FrontController.</p>
+        <h3 data-lang="proj_3_title">Gestión de Frases Célebres</h3>
+        <p data-lang="proj_3_desc">Aplicación web MVC con Doctrine ORM. Permite gestionar frases célebres, autores y temas con CRUD, buscador, paginación, y enrutamiento dinámico mediante FrontController.</p>
         <div class="chip-row">
           <span class="chip">PHP</span>
           <span class="chip">MVC</span>
           <span class="chip">Doctrine ORM</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/PHP/Frases_Doctrine" target="_blank" class="mono">github →</a>
+          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/PHP/Frases_Doctrine" target="_blank" class="mono" data-lang="link_github">github →</a>
         </div>
       </div>
     </div>
@@ -195,18 +200,18 @@
     <div class="project-card">
       <div class="frame-bar">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        <span class="frame-name mono">landing-inversiones.php</span>
+        <span class="frame-name mono" data-lang="frame_proj_4">landing-inversiones.php</span>
       </div>
       <div class="project-body">
-        <h3>Gestión de Frases + Landing Page</h3>
-        <p>App MVC que gestiona frases y autores. Incluye landing page con eventos, contacto, carga de datos XML y análisis de inversiones conectando con Inversis mediante PDO/MySQLi.</p>
+        <h3 data-lang="proj_4_title">Gestión de Frases + Landing Page</h3>
+        <p data-lang="proj_4_desc">App MVC que gestiona frases y autores. Incluye landing page con eventos, contacto, carga de datos XML y análisis de inversiones conectando con Inversis mediante PDO/MySQLi.</p>
         <div class="chip-row">
           <span class="chip">PHP</span>
           <span class="chip">MySQLi</span>
           <span class="chip">XML</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/PHP/LandingPage_%26_Frases" target="_blank" class="mono">github →</a>
+          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/PHP/LandingPage_%26_Frases" target="_blank" class="mono" data-lang="link_github">github →</a>
         </div>
       </div>
     </div>
@@ -215,18 +220,18 @@
     <div class="project-card">
       <div class="frame-bar">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        <span class="frame-name mono">chat-red-local.java</span>
+        <span class="frame-name mono" data-lang="frame_proj_5">chat-red-local.java</span>
       </div>
       <div class="project-body">
-        <h3>Chat en Red Local</h3>
-        <p>Aplicación de chat para aula con interfaz gráfica en Java (JFrame) y MySQL. Usa procedimientos almacenados, arquitectura MVC, control de acceso y mensajes en tiempo real.</p>
+        <h3 data-lang="proj_5_title">Chat en Red Local</h3>
+        <p data-lang="proj_5_desc">Aplicación de chat para aula con interfaz gráfica en Java (JFrame) y MySQL. Usa procedimientos almacenados, arquitectura MVC, control de acceso y mensajes en tiempo real.</p>
         <div class="chip-row">
           <span class="chip">Java</span>
           <span class="chip">Swing</span>
           <span class="chip">MySQL</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/Java/Chat" target="_blank" class="mono">github →</a>
+          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/Java/Chat" target="_blank" class="mono" data-lang="link_github">github →</a>
         </div>
       </div>
     </div>
@@ -235,18 +240,18 @@
     <div class="project-card">
       <div class="frame-bar">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        <span class="frame-name mono">votaciones.java</span>
+        <span class="frame-name mono" data-lang="frame_proj_6">votaciones.java</span>
       </div>
       <div class="project-body">
-        <h3>Votaciones Municipales DB4O</h3>
-        <p>App Java (Swing) que importa datos electorales desde CSV y los almacena en DB4O. Permite consultas territoriales, listados y corrección de datos con arquitectura MVC.</p>
+        <h3 data-lang="proj_6_title">Votaciones Municipales DB4O</h3>
+        <p data-lang="proj_6_desc">App Java (Swing) que importa datos electorales desde CSV y los almacena en DB4O. Permite consultas territoriales, listados y corrección de datos con arquitectura MVC.</p>
         <div class="chip-row">
           <span class="chip">Java</span>
           <span class="chip">DB4O</span>
           <span class="chip">MVC</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/Java/BD4OVotaciones" target="_blank" class="mono">github →</a>
+          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/Java/BD4OVotaciones" target="_blank" class="mono" data-lang="link_github">github →</a>
         </div>
       </div>
     </div>
@@ -255,17 +260,17 @@
     <div class="project-card">
       <div class="frame-bar">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        <span class="frame-name mono">animaciones.css</span>
+        <span class="frame-name mono" data-lang="frame_proj_7">animaciones.css</span>
       </div>
       <div class="project-body">
-        <h3>Animaciones CSS Creativas</h3>
-        <p>Proyecto visual con animaciones exclusivas en CSS (sin JS). Incluye escena marina, carruseles 2D/3D, zoom y efectos musicales aprovechando @keyframes, transforms y :has().</p>
+        <h3 data-lang="proj_7_title">Animaciones CSS Creativas</h3>
+        <p data-lang="proj_7_desc">Proyecto visual con animaciones exclusivas en CSS (sin JS). Incluye escena marina, carruseles 2D/3D, zoom y efectos musicales aprovechando @keyframes, transforms y :has().</p>
         <div class="chip-row">
           <span class="chip">CSS3</span>
           <span class="chip">Animaciones</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/CSS_SCSS/AnimacionesCss" target="_blank" class="mono">github →</a>
+          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/CSS_SCSS/AnimacionesCss" target="_blank" class="mono" data-lang="link_github">github →</a>
         </div>
       </div>
     </div>
@@ -274,17 +279,17 @@
     <div class="project-card">
       <div class="frame-bar">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        <span class="frame-name mono">interfaz-bs5.scss</span>
+        <span class="frame-name mono" data-lang="frame_proj_8">interfaz-bs5.scss</span>
       </div>
       <div class="project-body">
-        <h3>Interfaces con Bootstrap 5</h3>
-        <p>Diseño web responsivo que incluye navbar con modales, carrusel, cards, offcanvas y formularios con validación. Estilizada con SCSS y Utility API de Bootstrap.</p>
+        <h3 data-lang="proj_8_title">Interfaces con Bootstrap 5</h3>
+        <p data-lang="proj_8_desc">Diseño web responsivo que incluye navbar con modales, carrusel, cards, offcanvas y formularios con validación. Estilizada con SCSS y Utility API de Bootstrap.</p>
         <div class="chip-row">
           <span class="chip">Bootstrap 5</span>
           <span class="chip">SCSS</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/CSS_SCSS/InterfazBootstrap" target="_blank" class="mono">github →</a>
+          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/CSS_SCSS/InterfazBootstrap" target="_blank" class="mono" data-lang="link_github">github →</a>
         </div>
       </div>
     </div>
@@ -293,17 +298,17 @@
     <div class="project-card">
       <div class="frame-bar">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        <span class="frame-name mono">accesibilidad.html</span>
+        <span class="frame-name mono" data-lang="frame_proj_9">accesibilidad.html</span>
       </div>
       <div class="project-body">
-        <h3>Mitología Griega Accesible</h3>
-        <p>Página informativa inclusiva conforme a estándares WCAG. Implementa roles ARIA, navegación por teclado, contraste AAA y estructuras semánticas para lectores de pantalla.</p>
+        <h3 data-lang="proj_9_title">Mitología Griega Accesible</h3>
+        <p data-lang="proj_9_desc">Página informativa inclusiva conforme a estándares WCAG. Implementa roles ARIA, navegación por teclado, contraste AAA y estructuras semánticas para lectores de pantalla.</p>
         <div class="chip-row">
           <span class="chip">HTML5</span>
           <span class="chip">Accesibilidad (WCAG)</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/CSS_SCSS/PaginaAccesible" target="_blank" class="mono">github →</a>
+          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/CSS_SCSS/PaginaAccesible" target="_blank" class="mono" data-lang="link_github">github →</a>
         </div>
       </div>
     </div>
@@ -312,17 +317,17 @@
     <div class="project-card">
       <div class="frame-bar">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        <span class="frame-name mono">dark-mode.scss</span>
+        <span class="frame-name mono" data-lang="frame_proj_10">dark-mode.scss</span> 
       </div>
       <div class="project-body">
-        <h3>Web con SASS + Modo Oscuro</h3>
-        <p>Página moderna responsive estilizada con SASS (SCSS). Incluye modo claro/oscuro con transición suave, mixins, variables y nesting para un código mantenible.</p>
+        <h3 data-lang="proj_10_title">Web con SASS + Modo Oscuro</h3>
+        <p data-lang="proj_10_desc">Página moderna responsive estilizada con SASS (SCSS). Incluye modo claro/oscuro con transición suave, mixins, variables y nesting para un código mantenible.</p>
         <div class="chip-row">
           <span class="chip">SASS/SCSS</span>
           <span class="chip">Responsive</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/CSS_SCSS/SassResponsive" target="_blank" class="mono">github →</a>
+          <a href="https://github.com/gabsxcs/Portafolio_Proyectos_Daw/tree/main/CSS_SCSS/SassResponsive" target="_blank" class="mono" data-lang="link_github">github →</a>
         </div>
       </div>
     </div>
@@ -332,6 +337,7 @@
 
 <footer>
   <p class="mono">© 2026 Gabriela Sandoval</p>
-  <a href="index.html" class="next-link">← Volver al inicio</a>
+  <a href="index.html" class="next-link" data-lang="footer_back">← Volver al inicio</a>
 </footer>
 </body>
+</html>

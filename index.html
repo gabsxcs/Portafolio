@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css">
 <script src="./script/script.js" defer></script>
+<script src="./script/idiomas.js" defer></script>
 <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
@@ -17,9 +18,15 @@
   <div class="logo">gabriela<span>.</span>sandoval</div>
   <nav>
     <ul>
-      <li><a href="#sobre-mi">Sobre mí</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="./experience.html" class="nav-cta">Educación &amp; Proyectos</a></li>
+      <li><a href="#sobre-mi" data-lang="nav_sobre_mi">Sobre mí</a></li>
+      <li><a href="#habilidades" data-lang="nav_habilidades">Habilidades</a></li>
+      <li><a href="./experience.html" class="nav-cta" data-lang="nav_educacion">Educación &amp; Proyectos</a></li>
+      <!-- BOTONES DE IDIOMA -->
+      <li style="margin-left: 1rem;">
+        <button class="lang-btn" onclick="cambiarIdioma('es')">ES</button>
+        <span style="opacity:0.3">|</span>
+        <button class="lang-btn" onclick="cambiarIdioma('en')">EN</button>
+      </li>
     </ul>
   </nav>
 </header>
@@ -29,12 +36,12 @@
   <div class="hero-content">
     <div class="prompt-line mono">gabriela@sandoval:~$ whoami<span class="cursor"></span></div>
     <h1 class="name">Gabriela<br><em>Sandoval Castillo </em></h1>
-    <p class="role-tag">Desarrolladora <strong>Full Stack</strong> en formación.</p>
+    <p class="role-tag" data-lang="hero_role">Desarrolladora <strong>Full Stack</strong> en formación.</p>
   </div>
 </section>
 
 <section class="page-section reveal" id="sobre-mi">
-  <div class="eyebrow mono">Sobre mí</div>
+  <div class="eyebrow mono" data-lang="eyebrow_sobre_mi">Sobre mí</div>
   
   <div class="about-grid">
     <div class="about-visual">
@@ -47,21 +54,21 @@
       </div>
 
       <div class="status-chip">
-        <span class="label mono">formación</span>
-        <span class="value">Ingeniería Informática</span>
+        <span class="label mono" data-lang="label_formacion">formación</span>
+        <span class="value" data-lang="val_formacion">Ingeniería Informática</span>
       </div>
       <div class="status-chip">
-        <span class="label mono">universidad</span>
+        <span class="label mono" data-lang="label_universidad">universidad</span>
         <span class="value">UOC</span>
       </div>
     </div>
 
     <div class="about-text">
-        <p>Soy programadora junior graduada del ciclo formativo de <strong>Desarrollo de Aplicaciones Web</strong> y actualmente me encuentro cursando el Grado en <strong>Ingeniería Informática</strong> en la Universitat Oberta de Catalunya (UOC).</p>
+        <p data-lang="about_p1">Soy programadora junior graduada del ciclo formativo de <strong>Desarrollo de Aplicaciones Web</strong> y actualmente me encuentro cursando el Grado en <strong>Ingeniería Informática</strong> en la Universitat Oberta de Catalunya (UOC).</p>
         
-        <p>Manejo herramientas y lenguajes actuales como HTML, CSS, JavaScript, PHP y frameworks como React y Vue.js. Tengo conocimientos en bases de datos como MySQL y PostgreSQL, y también manejo el control de versiones con GitHub.</p>
+        <p data-lang="about_p2">Manejo herramientas y lenguajes actuales como HTML, CSS, JavaScript, PHP y frameworks como React y Vue.js. Tengo conocimientos en bases de datos como MySQL y PostgreSQL, y también manejo el control de versiones con GitHub.</p>
 
-        <p>Me apasiona el desarrollo web y siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades. Además, tengo un gran interés por ampliar mis conocimientos, por lo que actualmente estoy aprendiendo programación básica en <strong>ABAP</strong>.</p>
+        <p data-lang="about_p3">Me apasiona el desarrollo web y siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades. Además, tengo un gran interés por ampliar mis conocimientos, por lo que actualmente estoy aprendiendo programación básica en <strong>ABAP</strong>.</p>
 
         <div class="frame terminal-block">
           <div class="frame-bar">
@@ -69,10 +76,9 @@
             <span class="frame-name mono">idiomas.yml</span>
           </div>
           <div class="terminal-body mono">
-            <div class="yml-row"><span class="yml-key">español:</span><span class="yml-val">nativo</span></div>
-            <div class="yml-row"><span class="yml-key">catalán:</span><span class="yml-val">alto</span></div>
-            <div class="yml-row"><span class="yml-key">inglés:</span><span class="yml-val">intermedio</span></div>
-            <!-- <div class="yml-row"><span class="yml-key">tailandés:</span><span class="yml-val">básico</span></div> -->
+            <div class="yml-row"><span class="yml-key" data-lang="lang_es">español:</span><span class="yml-val" data-lang="lvl_native">nativo</span></div>
+            <div class="yml-row"><span class="yml-key" data-lang="lang_ca">catalán:</span><span class="yml-val" data-lang="lvl_high">alto</span></div>
+            <div class="yml-row"><span class="yml-key" data-lang="lang_en">inglés:</span><span class="yml-val" data-lang="lvl_intermediate">intermedio</span></div>
           </div>
         </div>
     </div>
@@ -80,7 +86,7 @@
 </section>
 
 <section class="page-section reveal" id="habilidades">
-  <div class="eyebrow mono">Habilidades</div>
+  <div class="eyebrow mono" data-lang="eyebrow_habilidades">Habilidades</div>
 
   <div class="skill-category">
     <h3 class="skill-cat-title mono"><span class="cat-index">01</span> Frontend</h3>
@@ -103,7 +109,7 @@
   </div>
 
   <div class="skill-category">
-    <h3 class="skill-cat-title mono"><span class="cat-index">03</span> Control de versiones</h3>
+    <h3 class="skill-cat-title mono"><span class="cat-index">03</span> <span data-lang="cat_version_control">Control de versiones</span></h3>
     <div class="skill-cards">
       <div class="skill-card"><i class="devicon-git-plain"></i><span>Git</span></div>
       <div class="skill-card"><i class="devicon-github-original"></i><span>GitHub</span></div>
@@ -111,7 +117,7 @@
   </div>
 
   <div class="skill-category">
-    <h3 class="skill-cat-title mono"><span class="cat-index">04</span> En aprendizaje</h3>
+    <h3 class="skill-cat-title mono"><span class="cat-index">04</span> <span data-lang="cat_learning">En aprendizaje</span></h3>
     <div class="skill-cards">
       <div class="skill-card skill-card--badge">
         <span class="badge-glyph">AB</span>
@@ -123,14 +129,14 @@
 </section>
 
 <section class="page-section reveal" id="contacto">
-  <div class="eyebrow mono">Contacto</div>
+  <div class="eyebrow mono" data-lang="eyebrow_contacto">Contacto</div>
 
   <div class="contact-terminal">
     <div class="frame-bar">
       <span class="dot"></span><span class="dot"></span><span class="dot"></span>
       <span class="frame-name mono">contacto.env</span>
     </div>
-
+ 
     <div class="contact-body">
 
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gabsxc.ss@gmail.com" target="_blank" rel="noopener" class="contact-row">
@@ -149,7 +155,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg>
         </span>
         <span class="contact-text">
-          <span class="contact-label mono">TELÉFONO</span>
+          <span class="contact-label mono" data-lang="contact_phone">TELÉFONO</span>
           <span class="contact-value">+34 666 90 12 03</span>
         </span>
         <span class="contact-arrow">↗</span>
@@ -179,7 +185,7 @@
 
 <footer>
   <p class="mono">© 2026 Gabriela Sandoval</p>
-  <a href="./experience.html" class="next-link">Educación, experiencia y proyectos →</a>
+  <a href="./experience.html" class="next-link" data-lang="footer_next">Educación, experiencia y proyectos →</a>
 </footer>
 
 </body>

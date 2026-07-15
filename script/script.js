@@ -5,7 +5,7 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   let w, h, dpr;
-  let nodes = [];
+  let nodes = []; 
   let mouse = { x: null, y: null };
 
   const COLOR_LINE = '179,35,75';

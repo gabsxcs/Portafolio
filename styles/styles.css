@@ -87,6 +87,21 @@
     outline-offset: 3px;
   }
 
+  .lang-btn {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .lang-btn:hover, .lang-btn.active {
+    opacity: 1;
+    font-weight: bold;
+  }
+
   /* ---------- Hero ---------- */
   .hero{
     position: relative;
@@ -404,7 +419,6 @@
 }
 .skill-card:hover span{ color: var(--cream); }
 
-/* Badge para tecnologías sin logo en la librería (ej. ABAP) */
 .skill-card--badge .badge-glyph{
   width: 2.2rem;
   height: 2.2rem;
@@ -610,7 +624,7 @@
   margin-top: 0.5rem;
 }
 
-/* ---------- Job cards (Experiencia) ---------- */
+/* ---------- Experiencia ---------- */
 .job-card{
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -648,7 +662,7 @@
   gap: 0.35rem;
 }
 
-/* ---------- Project cards ---------- */
+/* ---------- Project cards  ---------- */
 .project-grid{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
