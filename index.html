@@ -16,12 +16,20 @@
 
 <header>
   <div class="logo">gabriela<span>.</span>sandoval</div>
-  <nav>
+
+  <button class="menu-toggle" aria-label="Abrir menú">
+    <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+
+  <nav class="nav-menu">
     <ul>
       <li><a href="#sobre-mi" data-lang="nav_sobre_mi">Sobre mí</a></li>
       <li><a href="#habilidades" data-lang="nav_habilidades">Habilidades</a></li>
       <li><a href="./experience.html" class="nav-cta" data-lang="nav_educacion">Educación &amp; Proyectos</a></li>
-      <!-- BOTONES DE IDIOMA -->
       <li style="margin-left: 1rem;">
         <button class="lang-btn" onclick="cambiarIdioma('es')">ES</button>
         <span style="opacity:0.3">|</span>

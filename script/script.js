@@ -1,3 +1,23 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      console.log('Menu toggled');
+    });
+
+    const enlacesMenu = navMenu.querySelectorAll('a');
+    enlacesMenu.forEach(enlace => {
+      enlace.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        console.log('Menu closed');
+      });
+    });
+  }
+});
+
 (function(){
   const canvas = document.getElementById('network-canvas');
   const ctx = canvas.getContext('2d');
@@ -141,3 +161,4 @@
   });
 
 })();
+

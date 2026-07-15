@@ -13,21 +13,31 @@
 <script src="./script/idiomas.js" defer></script>
 </head>
 <body>
-    <header>
-  <div class="logo">gabriela<span>.</span>sandoval</div>
-  <nav>
-    <ul>
-      <li><a href="#educacion" data-lang="nav_edu">Educación</a></li>
-      <li><a href="#experiencia" data-lang="nav_exp">Experiencia</a></li>
-      <li><a href="#proyectos" data-lang="nav_proj">Proyectos</a></li>
-      <li><a href="./index.html" class="nav-cta" data-lang="nav_back">← Inicio </a></li>
-      <li style="margin-left: 1rem;">
-        <button class="lang-btn" onclick="cambiarIdioma('es')">ES</button>
-        <span style="opacity:0.3">|</span>
-        <button class="lang-btn" onclick="cambiarIdioma('en')">EN</button>
-      </li>
-    </ul>
-  </nav>
+  
+  <header>
+    <div class="logo">gabriela<span>.</span>sandoval</div>
+
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#educacion" data-lang="nav_edu">Educación</a></li>
+        <li><a href="#experiencia" data-lang="nav_exp">Experiencia</a></li>
+        <li><a href="#proyectos" data-lang="nav_proj">Proyectos</a></li>
+        <li><a href="./index.html" class="nav-cta" data-lang="nav_back">← Inicio </a></li>
+        <li style="margin-left: 1rem;">
+          <button class="lang-btn" onclick="cambiarIdioma('es')">ES</button>
+          <span style="opacity:0.3">|</span>
+          <button class="lang-btn" onclick="cambiarIdioma('en')">EN</button>
+        </li>
+      </ul>
+    </nav>
 </header>
 
 <section class="hero hero-sub">
