@@ -405,9 +405,16 @@
     gap: 0.55rem;
     font-size: 0.86rem;
   }
-  .yml-row{ display: flex; gap: 0.5em; }
-  .yml-key{ color: var(--muted-rose); }
-  .yml-val{ color: var(--cream); }
+  .yml-row{ 
+    display: flex; gap: 0.5em; 
+  }
+  .yml-key{ 
+    color: var(--muted-rose); 
+    min-width: 110px;
+  }
+  .yml-val{ 
+    color: var(--cream); 
+  }
   .yml-val::before, .yml-val::after{
     content: '"';
     color: var(--burgundy-bright);
@@ -737,6 +744,56 @@
   flex-direction: column;
   gap: 0.35rem;
 }
+
+/* -----------Certificades----------- */
+.cert-card{
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg-2);
+  overflow: hidden;
+  margin-bottom: 1.4rem;
+}
+.cert-body{ padding: 1.2rem 1.4rem 1.4rem; }
+.cert-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.cert-head h3{
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+.cert-date{ font-size: 0.76rem; color: var(--muted-rose); }
+.cert-company{
+  color: var(--burgundy-bright);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+.cert-list{
+  margin-top: 0.8rem;
+  padding-left: 1.1rem;
+  color: var(--muted-rose);
+  font-size: 0.92rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.cert-links{
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+.cert-links a{
+  font-size: 1rem;
+  color: var(--cream);
+  border-bottom: 1px solid var(--burgundy-bright);
+  padding-bottom: 2px;
+}
+.cert-links a:hover{ color: var(--burgundy-bright); }
 
 /* ---------- Project cards  ---------- */
 .project-grid{

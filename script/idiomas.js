@@ -3,7 +3,7 @@ const traducciones = {
       nav_sobre_mi: "Sobre mí",
       nav_habilidades: "Habilidades",
       nav_educacion: "Educación &amp; Proyectos",
-      hero_role: "Desarrolladora <strong>Full Stack</strong> en formación.",
+      hero_role: "Desarrolladora <strong>Full Stack</strong> Junior.",
       eyebrow_sobre_mi: "Sobre mí",
       label_formacion: "formación",
       val_formacion: "Ingeniería Informática",
@@ -17,6 +17,8 @@ const traducciones = {
       lvl_high: "alto",
       lang_en: "inglés:",
       lvl_intermediate: "intermedio",
+      lang_th: "tailandés:",
+      lvl_basic: "básico",
       eyebrow_habilidades: "Habilidades",
       cat_version_control: "Control de versiones",
       cat_learning: "En aprendizaje",
@@ -89,13 +91,20 @@ const traducciones = {
       frame_proj_7: "animaciones.css",
       frame_proj_8: "interfaz-bs5.scss",
       frame_proj_9: "accesibilidad.html",
-      frame_proj_10: "dark-mode.scss"
+      frame_proj_10: "dark-mode.scss",
+      eyebrow_certs: "Certificaciones",
+      cert_1_title: "Communicative Thai for Foreigners (Spanish version)",
+      cert_1_date: "Jul 2026",
+      cert_1_company: "Chulalongkorn University",
+      cert_1_li1: "Finalización exitosa del curso online abierto sin créditos de tailandés básico.",
+      cert_1_li2: "Credencial ID: CV1419995.",
+      cert_1_link: "Certificado →"
     },
     en: {
       nav_sobre_mi: "About me",
       nav_habilidades: "Skills",
       nav_educacion: "Education &amp; Projects",
-      hero_role: "<strong>Full Stack</strong> Developer in training.",
+      hero_role: "<strong>Full Stack</strong> Developer Junior.",
       eyebrow_sobre_mi: "About me",
       label_formacion: "education",
       val_formacion: "Computer Engineering",
@@ -109,6 +118,8 @@ const traducciones = {
       lvl_high: "advanced",
       lang_en: "english:",
       lvl_intermediate: "intermediate",
+      lang_th: "thai:",
+      lvl_basic: "basic",
       eyebrow_habilidades: "Skills",
       cat_version_control: "Version Control",
       cat_learning: "Currently learning",
@@ -181,7 +192,14 @@ const traducciones = {
       frame_proj_7: "animations.css",
       frame_proj_8: "bs5-interface.scss",
       frame_proj_9: "accessibility.html",
-      frame_proj_10: "dark-mode.scss" 
+      frame_proj_10: "dark-mode.scss",
+      eyebrow_certs: "Certifications",
+      cert_1_title: "Communicative Thai for Foreigners (Spanish version)",
+      cert_1_date: "Jul 2026",
+      cert_1_company: "Chulalongkorn University",
+      cert_1_li1: "Successful completion of the non-credit open online course in basic Thai.",
+      cert_1_li2: "Credential ID: CV1419995.",
+      cert_1_link: "Certificate →"
     }
   };
   
