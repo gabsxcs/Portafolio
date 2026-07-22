@@ -745,7 +745,7 @@
   gap: 0.35rem;
 }
 
-/* -----------Certificades----------- */
+/* -----------Certificaciones----------- */
 .cert-card{
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -766,6 +766,16 @@
   font-weight: 600;
   font-size: 1.15rem;
 }
+
+@media (max-width: 576px) {
+  .eyebrow {
+    font-size: 1.5rem;
+    letter-spacing: 1px; 
+    width: 100%;
+    text-align: left; 
+  }
+}
+
 .cert-date{ font-size: 0.76rem; color: var(--muted-rose); }
 .cert-company{
   color: var(--burgundy-bright);
